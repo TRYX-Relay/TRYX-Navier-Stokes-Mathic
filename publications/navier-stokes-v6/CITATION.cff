@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this research draft using the author and title below, and include the Git commit used."
+type: software
+title: "Navier–Stokes Mathic v6: signed Action accounting and a reproducible finite closure benchmark"
+authors:
+  - family-names: "Gattenby"
+    given-names: "Virgil Lee"
+version: "6"
+repository-code: "https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic"
+url: "https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/tree/main/publications/navier-stokes-v6"
+abstract: "Research draft package containing the locked v6 Mathic, recorded finite closure replay, and formal accounting proofs."

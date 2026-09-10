@@ -1,0 +1,1 @@
+PASS; atomic residual 0; 35 rows; return 34; peak 0.8976247572772990 at 17; max deviation 2E-16

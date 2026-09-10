@@ -1,0 +1,5 @@
+{
+  "amplitude": "DETECTED: AssertionError",
+  "growth": "DETECTED: IndexError",
+  "return_ordinal": "DETECTED: AssertionError"
+}

@@ -1,0 +1,23 @@
+name: Verify Navier-Stokes v6 package
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - 'publications/navier-stokes-v6/**'
+      - 'charts/navier-stokes/Navier_Stokes_Mathic_Beta_6.md'
+      - 'manifests/Navier_Stokes_Mathic*'
+      - 'verification/tryx-lean/**'
+      - '.github/workflows/verify-ns-v6-package.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify bytes, original replay, and negative controls
+        run: python3 publications/navier-stokes-v6/check_package.py

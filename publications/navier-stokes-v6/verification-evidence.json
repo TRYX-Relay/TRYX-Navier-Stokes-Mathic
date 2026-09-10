@@ -1,0 +1,25 @@
+{
+  "proof_commit": "05bf7ef31c80dab2e580a72ce4608435efd00e8a",
+  "run_url": "https://github.com/TRYX-Relay/TRYX-MATHIC/actions/runs/34444045419",
+  "build_job": 102764868730,
+  "independent_job": 102765681444,
+  "build": "success",
+  "independent": "success",
+  "acceptance_log_lines": [
+    "2026-09-10T06:19:52.9514661Z nanoda kernel accepts the solution",
+    "2026-09-10T06:19:52.9516311Z Lean default kernel accepts the solution",
+    "2026-09-10T06:19:53.0963936Z Finished with result: success"
+  ],
+  "scope": "Three TRYX.NS accounting statements; no formal corridor or PDE proof.",
+  "publication_reverification": {
+    "commit": "ba3298ac2c5a18918c960a47880ee87e649f511c",
+    "run_url": "https://github.com/TRYX-Relay/TRYX-MATHIC/actions/runs/34453280787",
+    "build": "success",
+    "independent": "success",
+    "acceptance_log_lines": [
+      "2026-09-10T08:15:31.8546249Z nanoda kernel accepts the solution",
+      "2026-09-10T08:15:31.8549314Z Lean default kernel accepts the solution",
+      "2026-09-10T08:15:32.0095289Z Finished with result: success"
+    ]
+  }
+}
