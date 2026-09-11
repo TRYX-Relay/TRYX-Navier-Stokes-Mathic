@@ -1,9 +1,10 @@
 {
   ".github/workflows/verify-ns-v6-package.yml": "df8e1dced870e5122f3ec158174014dc513872949d2f768c95667ade285ef810",
   ".github/workflows/verify-tryx-formulas.yml": "63deea76a25b65459f75c435e1f6d67363e9735e557113dbac1933ad56335285",
-  "CITATION.cff": "2514e426e932eb6a9c49470f992319bbee7c4cce1e39478bf54fb61b92e47bd5",
+  "CITATION.cff": "76793e9b2b5377075efbbe75775c15ac9e04ded31bd89a7194cca5bfa1545839",
+  "DEMONSTRATION.md": "80b7eb5b2cba5ac6c0087d3fdb09e1ec8d79f31912f18c33139c39efd1f7e2fe",
   "PROVENANCE.md": "ecc3102702b4b77d4ddc1718d1f13e6f29e189125035ff0c4b2a2b109de75ca2",
-  "README.md": "e35e8601f10260398072ffbb6c7d2155bb9f9e1e98a808fa0399529709869c02",
+  "README.md": "1052daf755a3b0f832e752736396c33a4b759d1cd3dd5d79a35e64222ed7fdb5",
   "charts/navier-stokes/Navier_Stokes_Mathic_Beta_6.md": "4752631cf5705669d51fae99ee0b3f025f8bdb70e9f7113926f3d389d65f562d",
   "manifests/Navier_Stokes_Mathic_Beta_6.LOCK.md": "32838ca1427d2983fb6651ccad3e33d94894ab2ed52fabd11e77e753e457d9ee",
   "manifests/Navier_Stokes_Mathic_v6.RELEASE.md": "78b632c38d965a303825eeb67162cc9bfb0115bce812402a42b50aeebe22ffb3",
