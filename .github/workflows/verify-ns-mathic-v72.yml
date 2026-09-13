@@ -1,0 +1,46 @@
+name: Verify NS MATHIC v7.2 Lean
+
+on:
+  push:
+    paths:
+      - 'verification/ns-mathic-v72/**'
+      - '.github/workflows/verify-ns-mathic-v72.yml'
+  pull_request:
+    paths:
+      - 'verification/ns-mathic-v72/**'
+      - '.github/workflows/verify-ns-mathic-v72.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lean-kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install Lean 4.19.0
+        run: |
+          curl --fail --location --retry 3 https://raw.githubusercontent.com/leanprover/elan/v4.1.2/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
+          sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain leanprover/lean4:v4.19.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/lean" +leanprover/lean4:v4.19.0 --version
+      - name: Fetch Mathlib cache
+        working-directory: verification/ns-mathic-v72
+        run: |
+          lake update
+          lake exe cache get
+      - name: Static no-sorry/no-axiom audit
+        working-directory: verification/ns-mathic-v72
+        run: |
+          ! grep -RInE '\bsorry\b|^[[:space:]]*axiom\b' NS NavierStokesMathicV72.lean --include='*.lean'
+      - name: Build MATHIC v7.2 Lean target
+        working-directory: verification/ns-mathic-v72
+        run: lake build
+      - name: Kernel-load aggregate target
+        working-directory: verification/ns-mathic-v72
+        run: lake env lean NavierStokesMathicV72.lean
