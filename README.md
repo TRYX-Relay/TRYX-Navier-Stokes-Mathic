@@ -5,6 +5,8 @@
 **Virgil Lee Gattenby**  
 TRYX / ENIAD / MATHIC
 
+**Public verification status:** the dedicated `Verify NS MATHIC v7.2 Lean` GitHub Actions workflow completed successfully on the public `main` branch. The formalized finite/algebraic and conditional v7.2 score is therefore publicly build-checked as well as receipt-backed.
+
 ## Start here
 
 The **canonical review target is MATHIC v7.2**. The papers are conventional mathematical presentations around that score. The Fourier Coefficient E6B is an optional working-beta reviewer instrument.
@@ -24,6 +26,7 @@ The **canonical review target is MATHIC v7.2**. The papers are conventional math
 CANONICAL_REVIEW_TARGET = MATHIC_v7.2
 FORMULA_AUTHORITY = V4
 LEAN_KERNEL_CHECK = PASS
+PUBLIC_GITHUB_ACTIONS_CHECK = PASS
 PAPERS_ROLE = FUNCTIONAL_ORNAMENTAL
 E6B_ROLE = WORKING_BETA_REVIEWER_INSTRUMENT / OPTIONAL_EXTRA_CREDIT
 ```
@@ -77,7 +80,7 @@ Recorded historical fixture: atomic equality residual 0; positive remainder 98; 
 
 | Research | Current public review focus |
 | --- | --- |
-| **Navier–Stokes / ANEA** | MATHIC v7.2 canonical review target; Lean-checked finite/algebraic and conditional spine |
+| **Navier–Stokes / ANEA** | MATHIC v7.2 canonical review target; public Lean workflow PASS; Lean-checked finite/algebraic and conditional spine |
 | [Problem No Problem / P vs NP](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC) | Existential Boolean folding semantics and finite benchmarks |
 | [Snowman / Collatz conjecture](https://github.com/TRYX-Relay/TRYX-Collatz-Mathic) | Address reconstruction, fold identities, and local continuity checks |
 
