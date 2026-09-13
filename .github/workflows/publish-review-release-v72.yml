@@ -24,7 +24,10 @@ jobs:
 
           Canonical review target: **Navier-Stokes MATHIC v7.2**  
           Formula authority: **V4**  
-          Public Lean verification: **PASS**
+          Public Lean verification: **PASS**  
+          Public operating mode: **STANDALONE REVIEW FORTRESS**
+
+          This release is self-contained for public review. No other public research release is required to understand, reproduce, cite, audit, or challenge the Navier-Stokes ANEA package.
 
           Review order:
           1. MATHIC v7.2
@@ -33,7 +36,8 @@ jobs:
           4. Addendum A1
           5. Addendum A2
           6. Fourier Coefficient E6B Working BETA reviewer instrument
-          7. Reader's Guide / reviewer manifest
+          7. Reviewer manifest / parked-release record
+          8. Citation and provenance
 
           The papers are conventional exposition around the score. The Fourier Coefficient E6B is optional extra credit for reviewers and carries no independent theorem weight.
 
