@@ -1,0 +1,62 @@
+name: Publish ANEA MATHIC v7.2 review release
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-review-release-v72.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-release:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Create or refresh v7.2.0 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > "$RUNNER_TEMP/release-notes.md" <<'EOF'
+          # Navier-Stokes ANEA review release - MATHIC v7.2
+
+          Canonical review target: **Navier-Stokes MATHIC v7.2**  
+          Formula authority: **V4**  
+          Public Lean verification: **PASS**
+
+          Review order:
+          1. MATHIC v7.2
+          2. Lean kernel verification receipt and public Lean source
+          3. ANEA Version 2
+          4. Addendum A1
+          5. Addendum A2
+          6. Fourier Coefficient E6B Working BETA reviewer instrument
+          7. Reader's Guide / reviewer manifest
+
+          The papers are conventional exposition around the score. The Fourier Coefficient E6B is optional extra credit for reviewers and carries no independent theorem weight.
+
+          Kernel-checked scope includes the V4 finite ledger, signed stretching decomposition, One-Tension identity, projection neutrality under explicit hypotheses, R1 finite domination, R2 finite identities and factorization, the conditional R2-to-UAC bridge, the V4 fixture, and the 35-row corridor replay.
+
+          Open obligations remain:
+          - scale-uniform R2 depletion law
+          - continuum passage
+          - unconditional Uniform Action Control
+          - global 3-D unforced regularity
+
+          `CLAIM_PROMOTION = NONE`
+          EOF
+
+          if gh release view v7.2.0 >/dev/null 2>&1; then
+            gh release edit v7.2.0 \
+              --title "Navier-Stokes ANEA review release - MATHIC v7.2" \
+              --notes-file "$RUNNER_TEMP/release-notes.md" \
+              --latest
+          else
+            gh release create v7.2.0 \
+              --target "$GITHUB_SHA" \
+              --title "Navier-Stokes ANEA review release - MATHIC v7.2" \
+              --notes-file "$RUNNER_TEMP/release-notes.md" \
+              --latest
+          fi
