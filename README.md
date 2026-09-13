@@ -1,5 +1,7 @@
 # Navier–Stokes ANEA review release — MATHIC v7.2
 
+[![Verify NS MATHIC v7.2 Lean](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml/badge.svg)](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml)
+
 **Virgil Lee Gattenby**  
 TRYX / ENIAD / MATHIC
 
@@ -9,6 +11,7 @@ The **canonical review target is MATHIC v7.2**. The papers are conventional math
 
 - [MATHIC v7.2 — canonical review target](review/Mathic/Navier_Stokes_Mathic_v7_2.PAPER_SYNC.LOCKED.md)
 - [Lean kernel verification receipt](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md)
+- [Public v7.2 Lean source](verification/ns-mathic-v72/)
 - [Reviewer packet manifest](review/ANEA_REVIEW_PACKET_v1_0.MANIFEST.md)
 - [Review release / parked state](review/NS_ANEA_REVIEW_RELEASE_v1_0.PARKED.md)
 - [Historical v6 reproduction package](publications/navier-stokes-v6/)
@@ -44,7 +47,7 @@ Kernel-checked components include:
 - locked V4 atomic fixture
 - exact 35-row corridor replay and recorded return at ordinal 34
 
-The exact receipt is published under [`review/`](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md).
+The exact receipt is published under [`review/`](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md), and the buildable public source is under [`verification/ns-mathic-v72/`](verification/ns-mathic-v72/).
 
 ## What remains open
 
