@@ -5,18 +5,19 @@
 **Virgil Lee Gattenby**  
 TRYX / ENIAD / MATHIC
 
-**Public verification status:** the dedicated `Verify NS MATHIC v7.2 Lean` GitHub Actions workflow completed successfully on the public `main` branch. The formalized finite/algebraic and conditional v7.2 score is therefore publicly build-checked as well as receipt-backed.
+**Public verification status:** the dedicated `Verify NS MATHIC v7.2 Lean` GitHub Actions workflow completed successfully on the public `main` branch. The formalized finite/algebraic and conditional v7.2 score is publicly build-checked as well as receipt-backed.
 
 **Current GitHub release:** [v7.2.0 — Navier-Stokes ANEA review release / MATHIC v7.2](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/releases/tag/v7.2.0)
 
-## Start here
+## Standalone public fortress
 
-The **canonical review target is MATHIC v7.2**. The papers are conventional mathematical presentations around that score. The Fourier Coefficient E6B is an optional working-beta reviewer instrument.
+This repository is the complete public review surface for the Navier-Stokes ANEA release. No other public research release is required to understand, reproduce, cite, audit, or challenge the material published here.
 
 - [MATHIC v7.2 — canonical review target](review/Mathic/Navier_Stokes_Mathic_v7_2.PAPER_SYNC.LOCKED.md)
 - [Lean kernel verification receipt](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md)
 - [Public v7.2 Lean source](verification/ns-mathic-v72/)
 - [Reviewer packet manifest](review/ANEA_REVIEW_PACKET_v1_0.MANIFEST.md)
+- [Public fortress closeout](review/NS_ANEA_PUBLIC_FORTRESS_CLOSEOUT_v1_0.md)
 - [Review release / parked state](review/NS_ANEA_REVIEW_RELEASE_v1_0.PARKED.md)
 - [Historical v6 reproduction package](publications/navier-stokes-v6/)
 - [Citation metadata](CITATION.cff)
@@ -25,15 +26,18 @@ The **canonical review target is MATHIC v7.2**. The papers are conventional math
 ## Review hierarchy
 
 ```text
+PUBLIC_FORTRESS = TRYX-Navier-Stokes-Mathic
 CANONICAL_REVIEW_TARGET = MATHIC_v7.2
 FORMULA_AUTHORITY = V4
 LEAN_KERNEL_CHECK = PASS
 PUBLIC_GITHUB_ACTIONS_CHECK = PASS
+OTHER_PUBLIC_RELEASE_DEPENDENCY = NONE
+CROSS_RELEASE_REVIEW_ROUTING = NONE
 PAPERS_ROLE = FUNCTIONAL_ORNAMENTAL
 E6B_ROLE = WORKING_BETA_REVIEWER_INSTRUMENT / OPTIONAL_EXTRA_CREDIT
 ```
 
-The score is the object to trace, replay, formally check, and audit. ANEA Version 2 and Addenda A1/A2 provide conventional exposition. The E6B gives reviewers an interactive inspection surface rather than another static figure.
+The score is the object to trace, replay, formally check, and audit. ANEA Version 2 and Addenda A1/A2 provide conventional exposition. The Fourier Coefficient E6B gives reviewers an interactive inspection surface rather than another static figure.
 
 ## Machine verification
 
@@ -68,7 +72,7 @@ A passing Lean build establishes the formalized finite/algebraic and conditional
 
 ## Historical reproducibility package
 
-The earlier v6 package remains available as reproducibility history and still contains the recorded local-closure benchmark, replay scripts, and earlier formal verification surfaces.
+The earlier v6 package remains available as historical reproducibility evidence and contains the recorded local-closure benchmark, replay scripts, and earlier formal verification surfaces.
 
 ```sh
 git clone https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic.git
@@ -78,22 +82,8 @@ python3 publications/navier-stokes-v6/check_package.py
 
 Recorded historical fixture: atomic equality residual 0; positive remainder 98; 35 corridor rows; first zero return at ordinal 34; maximum replay discrepancy approximately `2e-16`.
 
-## Research storefronts
-
-| Research | Current public review focus |
-| --- | --- |
-| **Navier–Stokes / ANEA** | MATHIC v7.2 canonical review target; public Lean workflow PASS; Lean-checked finite/algebraic and conditional spine |
-| [Problem No Problem / P vs NP](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC) | Existential Boolean folding semantics and finite benchmarks |
-| [Snowman / Collatz conjecture](https://github.com/TRYX-Relay/TRYX-Collatz-Mathic) | Address reconstruction, fold identities, and local continuity checks |
-
 ## Independent review
 
-Please review the MATHIC first, then use the Lean receipt, papers, and optional E6B instrument as supporting surfaces. When reporting findings, distinguish:
-
-- score/formula correctness,
-- machine verification,
-- finite replay behavior,
-- conditional analytic bridges,
-- and open theorem obligations.
+Please review the MATHIC first, then use the Lean receipt, papers, and optional E6B instrument as supporting surfaces. When reporting findings, distinguish score/formula correctness, machine verification, finite replay behavior, conditional analytic bridges, and open theorem obligations.
 
 Repository issues are welcome for reproducible findings.
