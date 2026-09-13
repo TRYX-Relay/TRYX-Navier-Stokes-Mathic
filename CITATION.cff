@@ -1,14 +1,14 @@
 cff-version: 1.2.0
-message: "Please cite this research draft using the author and title below, and include the Git commit used."
+message: "Please cite this review release using the author, title, version, and Git commit used."
 type: software
-title: "Navier–Stokes Mathic v6: signed Action accounting and a reproducible finite closure benchmark"
+title: "Navier-Stokes ANEA review release: MATHIC v7.2 canonical review target and Lean kernel verification"
 authors:
   - family-names: "Gattenby"
     given-names: "Virgil Lee"
-version: "6"
+version: "7.2-review-v1.0"
 repository-code: "https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic"
-url: "https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/tree/main/publications/navier-stokes-v6"
-abstract: "Research draft package containing the locked v6 Mathic, recorded finite closure replay, and formal accounting proofs."
+url: "https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/tree/main/review"
+abstract: "Public review storefront for the locked Navier-Stokes MATHIC v7.2 score, V4 formula authority, Lean 4.19.0 kernel verification receipt, ANEA review manifest, and preserved claim boundary. The formalized finite/algebraic and conditional score is machine-checked; scale-uniform depletion, continuum passage, and global 3-D regularity remain open."
 keywords:
   - "navier-stokes"
   - "lean4"
@@ -16,4 +16,7 @@ keywords:
   - "fluid-dynamics"
   - "reproducible-research"
   - "mathic"
-  - "enaid"
+  - "eniad"
+  - "tryx"
+  - "fourier"
+  - "review-instrument"
