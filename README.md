@@ -7,6 +7,8 @@ TRYX / ENIAD / MATHIC
 
 **Public verification status:** the dedicated `Verify NS MATHIC v7.2 Lean` GitHub Actions workflow completed successfully on the public `main` branch. The formalized finite/algebraic and conditional v7.2 score is therefore publicly build-checked as well as receipt-backed.
 
+**Current GitHub release:** [v7.2.0 — Navier-Stokes ANEA review release / MATHIC v7.2](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/releases/tag/v7.2.0)
+
 ## Start here
 
 The **canonical review target is MATHIC v7.2**. The papers are conventional mathematical presentations around that score. The Fourier Coefficient E6B is an optional working-beta reviewer instrument.
