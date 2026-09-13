@@ -1,0 +1,38 @@
+import NS.R2Bridge
+
+namespace NavierStokesMathicV72
+
+/-- Locked V4 atomic fixture arithmetic. -/
+theorem locked_fixture_replay :
+    (820.87564089412 : ℝ) = 134.87564089412 + 588 + 98 := by
+  norm_num
+
+/-- Exact V4 corridor increments, stored as rationals for executable replay. -/
+def corridorIncrements : List ℚ := [
+  0.09553588951672509, 0.09055202114953431, 0.08548646601937548,
+  0.08034159585670864, 0.07511977289655647, 0.06982334936776624,
+  0.06445466699423719, 0.05901605650549868, 0.05350983715908342,
+  0.04793831627264922, 0.04230378876690111, 0.03660853671894415,
+  0.03085482892643654, 0.025044920481576582, 0.019181052355918382,
+  0.013265450995561423, 0.007300327925861438, 0.001287879367964706,
+  -0.004769714136330094, -0.010870288088540292, -0.017011694387008447,
+  -0.023191801671629264, -0.02940849565752046, -0.035659679459456584,
+  -0.04194327390595731, -0.048257217844025035, -0.054599468434417986,
+  -0.06096800143615155, -0.06736081148318362, -0.07377591234978809,
+  -0.080211337208425, -0.08666513887627048, -0.09313539005441385,
+  -0.09962018355668079, -0.1061176325297879
+]
+
+def corridorStep (E d : ℚ) : ℚ := max (E + d) 0
+
+/-- The full recorded 35-row corridor returns to zero. -/
+theorem corridor_returns_zero :
+    corridorIncrements.foldl corridorStep 0 = 0 := by
+  native_decide
+
+/-- The corridor contains exactly 35 recorded action increments. -/
+theorem corridor_has_35_rows :
+    corridorIncrements.length = 35 := by
+  native_decide
+
+end NavierStokesMathicV72
