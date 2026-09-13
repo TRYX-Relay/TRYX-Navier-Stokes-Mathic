@@ -1,21 +1,22 @@
-# Demonstration walkthrough: Navier–Stokes Mathic v6 — local closure and Lean 4 verification
+# Demonstration walkthrough: Navier-Stokes MATHIC v7.2 review release
 
 Author: Virgil Lee Gattenby
 
 This is a recording guide and reproducible walkthrough. It is not a prerecorded video.
 
-1. Open the score linked from the main README. Show the chart or score and its notation before introducing the result.
-2. Open the manuscript and identify the exact local-closure claim and its scope.
-3. From the repository root, run:
+1. Open the [MATHIC v7.2 score](review/Mathic/Navier_Stokes_Mathic_v7_2.PAPER_SYNC.LOCKED.md). State that it is the canonical review target and that the V4 formulas are the formula authority.
+2. Open the [Lean kernel receipt](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md). Show the exact verified head, merged commit, Lean version, successful workflow run, and the `0 sorry / 0 project axiom declarations` audit.
+3. Point out the kernel-checked score components: One-Tension, signed stretching, projection neutrality under explicit hypotheses, R1, R2 finite identities, the conditional R2-to-UAC bridge, and the 35-row corridor replay.
+4. Open the [reviewer manifest](review/ANEA_REVIEW_PACKET_v1_0.MANIFEST.md). Show the claim firewall: scale-uniform depletion, continuum passage, unconditional UAC, and global 3-D regularity remain open.
+5. For historical reproducibility, run:
 
 ```sh
 python3 publications/navier-stokes-v6/check_package.py
 ```
 
-4. Show the actual terminal output, including any failure. Explain that the command checks archived bytes, replay consistency, and deliberate corruption detection. It does not execute Lean.
-5. Open the Lean proof source and the linked Actions workflow. Show the theorem statement and the corresponding checker results separately from the Python replay.
-6. Close with the review question: Does the replay reproduce all 35 corridor rows, return at ordinal 34, and detect each deliberate corruption?
+6. If demonstrating the Fourier Coefficient E6B, introduce it as an optional **working BETA reviewer instrument**. It is useful for inspection but carries no independent theorem weight.
+7. Close with the review question: does the formalized score say exactly what the packet claims it says, and does the machine receipt support those finite/algebraic and conditional statements without promoting the open analytic gates?
 
-For a short recording, spend roughly 15 seconds on the score, 30 seconds on the command and output, and 15 seconds on the proof scope and repository link. Leave longer runs uncut or clearly disclose any edits.
+For a short recording, spend about 20 seconds on the MATHIC, 20 seconds on the Lean receipt, 15 seconds on the claim boundary, and the remaining time on the optional E6B or historical replay.
 
-The NS replay does not independently regenerate a fluid simulation. PNP semantic closure does not establish a conventional polynomial-time bound. Collatz address-fold closure does not establish termination of every Collatz orbit.
+The strongest public statement supported by this release is the kernel-checked finite/algebraic and conditional MATHIC spine. Global three-dimensional Navier-Stokes regularity is not claimed as proved.
