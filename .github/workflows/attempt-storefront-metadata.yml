@@ -1,0 +1,51 @@
+name: Attempt storefront metadata refresh
+
+on:
+  push:
+    paths:
+      - '.github/workflows/attempt-storefront-metadata.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Attempt repository description update
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set +e
+          body='{"description":"Navier-Stokes ANEA research by Virgil Lee Gattenby: MATHIC v7.2 canonical review target, V4 formula authority, public Lean 4.19 verification, ANEA papers, and Fourier Coefficient E6B working-beta reviewer instrument. Global 3-D regularity remains open.","homepage":"https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/releases/tag/v7.2.0"}'
+          code=$(curl -sS -o /tmp/repo-response.json -w '%{http_code}' \
+            -X PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$REPO" \
+            -d "$body")
+          echo "repository PATCH status=$code"
+          cat /tmp/repo-response.json || true
+
+      - name: Attempt repository topics update
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set +e
+          body='{"names":["navier-stokes","lean4","formal-verification","fluid-dynamics","reproducible-research","mathic","eniad","tryx","fourier"]}'
+          code=$(curl -sS -o /tmp/topics-response.json -w '%{http_code}' \
+            -X PUT \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$REPO/topics" \
+            -d "$body")
+          echo "topics PUT status=$code"
+          cat /tmp/topics-response.json || true
+
+      - name: Record attempt outcome
+        run: echo "Metadata refresh attempt completed; inspect prior step HTTP statuses."
