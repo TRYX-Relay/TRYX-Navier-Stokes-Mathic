@@ -1,89 +1,68 @@
-# Navier–Stokes ANEA review release — MATHIC v7.2
-
-[![Verify NS MATHIC v7.2 Lean](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml/badge.svg)](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml)
+# Navier–Stokes: A Nonexplosive Alternative
 
 **Virgil Lee Gattenby**  
 TRYX / ENIAD / MATHIC
 
-**Public verification status:** the dedicated `Verify NS MATHIC v7.2 Lean` GitHub Actions workflow completed successfully on the public `main` branch. The formalized finite/algebraic and conditional v7.2 score is publicly build-checked as well as receipt-backed.
+[![Verify NS MATHIC v7.2 Lean](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml/badge.svg)](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml)
 
-**Current GitHub release:** [v7.2.0 — Navier-Stokes ANEA review release / MATHIC v7.2](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/releases/tag/v7.2.0)
+**[Download the clean Lean reviewer package](review/packages/261005/NS_ANEA_LEAN_REVIEW_261005.zip)** · **[Read the canonical MATHIC v7.2 score](review/Mathic/Navier_Stokes_Mathic_v7_2.PAPER_SYNC.LOCKED.md)**
 
-## Standalone public fortress
+The review target is the finite/algebraic and conditional MATHIC v7.2 formalization. Its recorded Lean kernel check covers signed accounting, finite identities, fixtures and conditional bridges. Scale-uniform depletion, continuum passage, unconditional Uniform Action Control and global three-dimensional regularity remain open.
 
-This repository is the complete public review surface for the Navier-Stokes ANEA release. No other public research release is required to understand, reproduce, cite, audit, or challenge the material published here.
+## Current review materials
 
-- [MATHIC v7.2 — canonical review target](review/Mathic/Navier_Stokes_Mathic_v7_2.PAPER_SYNC.LOCKED.md)
-- [Lean kernel verification receipt](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md)
-- [Public v7.2 Lean source](verification/ns-mathic-v72/)
-- [Reviewer packet manifest](review/ANEA_REVIEW_PACKET_v1_0.MANIFEST.md)
-- [Public fortress closeout](review/NS_ANEA_PUBLIC_FORTRESS_CLOSEOUT_v1_0.md)
-- [Review release / parked state](review/NS_ANEA_REVIEW_RELEASE_v1_0.PARKED.md)
-- [Historical v6 reproduction package](publications/navier-stokes-v6/)
-- [Citation metadata](CITATION.cff)
-- [Provenance](PROVENANCE.md)
+| Material | Where to start |
+|---|---|
+| Lean reviewer archive | [Clean package, 5 October 2026](review/packages/261005/NS_ANEA_LEAN_REVIEW_261005.zip), including its README and SHA-256 manifest |
+| Canonical mathematical score | [Locked MATHIC v7.2](review/Mathic/Navier_Stokes_Mathic_v7_2.PAPER_SYNC.LOCKED.md); formula authority V4 |
+| Formal source and build configuration | [Lean project](verification/ns-mathic-v72/) |
+| Recorded verification | [Kernel receipt](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md) and [dedicated workflow](.github/workflows/verify-ns-mathic-v72.yml) |
+| Citation and source lineage | [Citation](CITATION.cff) and [provenance](PROVENANCE.md) |
+| Historical release | [v7.2.0](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/releases/tag/v7.2.0) |
 
-## Review hierarchy
+The clean archive contains 19 byte-verified source files plus its package README and checksum manifest, selected from commit `83d49fca13918bec9baf1a612ac43a114e0e60f1`. Local Lean imports were checked for completeness. This packaging change did not rerun Lean or alter the proof sources.
 
-```text
-PUBLIC_FORTRESS = TRYX-Navier-Stokes-Mathic
-CANONICAL_REVIEW_TARGET = MATHIC_v7.2
-FORMULA_AUTHORITY = V4
-LEAN_KERNEL_CHECK = PASS
-PUBLIC_GITHUB_ACTIONS_CHECK = PASS
-OTHER_PUBLIC_RELEASE_DEPENDENCY = NONE
-CROSS_RELEASE_REVIEW_ROUTING = NONE
-PAPERS_ROLE = FUNCTIONAL_ORNAMENTAL
-E6B_ROLE = WORKING_BETA_REVIEWER_INSTRUMENT / OPTIONAL_EXTRA_CREDIT
-```
+## Reproduce the Lean review
 
-The score is the object to trace, replay, formally check, and audit. ANEA Version 2 and Addenda A1/A2 provide conventional exposition. The Fourier Coefficient E6B gives reviewers an interactive inspection surface rather than another static figure.
-
-## Machine verification
-
-The v7.2 formalization was built and kernel-loaded in **Lean 4.19.0** with the recorded Mathlib revision. The project source audit reported **0 `sorry`** and **0 project axiom declarations**.
-
-Kernel-checked components include:
-
-- V4 finite scalar ledger definitions
-- signed stretching decomposition
-- One-Tension exact local accounting identity
-- projection neutrality under explicit hypotheses
-- R1 finite positive-observable domination
-- R2 finite identities and `Theta = chi * Lambda` factorization
-- conditional R2-to-Uniform-Action-Control bridge
-- conditional UAC differential-inequality bridge
-- locked V4 atomic fixture
-- exact 35-row corridor replay and recorded return at ordinal 34
-
-The exact receipt is published under [`review/`](review/TRYX.NS.MATHIC.V7_2.LEAN.KERNEL.RECEIPT.260913.md), and the buildable public source is under [`verification/ns-mathic-v72/`](verification/ns-mathic-v72/).
-
-## What remains open
-
-```text
-SCALE_UNIFORM_R2_DEPLETION = OPEN
-CONTINUUM_PASSAGE = OPEN
-UNCONDITIONAL_UNIFORM_ACTION_CONTROL = OPEN
-GLOBAL_3D_UNFORCED_REGULARITY = OPEN
-CLAIM_PROMOTION = NONE
-```
-
-A passing Lean build establishes the formalized finite/algebraic and conditional score. It does **not** turn the open scale-uniform or continuum obligations into a proof of global three-dimensional regularity.
-
-## Historical reproducibility package
-
-The earlier v6 package remains available as historical reproducibility evidence and contains the recorded local-closure benchmark, replay scripts, and earlier formal verification surfaces.
+Extract the clean archive and enter its `NS_ANEA_LEAN_REVIEW_261005` folder, or clone this repository. With Lean/Elan installed, run:
 
 ```sh
-git clone https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic.git
-cd TRYX-Navier-Stokes-Mathic
-python3 publications/navier-stokes-v6/check_package.py
+cd verification/ns-mathic-v72
+lake update
+lake exe cache get
+lake build
+lake env lean NavierStokesMathicV72.lean
 ```
 
-Recorded historical fixture: atomic equality residual 0; positive remainder 98; 35 corridor rows; first zero return at ordinal 34; maximum replay discrepancy approximately `2e-16`.
+The project selects Lean 4.19.0 and Mathlib v4.19.0. The historical receipt records Mathlib revision `c44e0c8ee63ca166450922a373c7409c5d26b00b`. No `lake-manifest.json` is committed for this target; retain the generated dependency manifest and exact source commit when recording a new run. Dependency retrieval requires network access.
 
-## Independent review
+## Verification scope
 
-Please review the MATHIC first, then use the Lean receipt, papers, and optional E6B instrument as supporting surfaces. When reporting findings, distinguish score/formula correctness, machine verification, finite replay behavior, conditional analytic bridges, and open theorem obligations.
+The historical receipt records a successful build and aggregate kernel load, with zero project `sorry` occurrences and zero project axiom declarations. Covered components include:
 
-Repository issues are welcome for reproducible findings.
+- V4 finite scalar ledger and signed stretching decomposition.
+- One-Tension exact accounting and projection neutrality under explicit hypotheses.
+- R1 finite positive-observable domination.
+- R2 finite identities, factorization and conditional R2-to-UAC bridge.
+- Conditional UAC differential-inequality bridge.
+- Atomic fixture and exact 35-row corridor replay.
+
+The workflow badge links to current CI history. The preserved receipt describes its recorded run; it is not a fresh verification of the October 5 paper.
+
+## Package boundary
+
+The Lean reviewer archive excludes historical v6 papers and replay packages, unrelated general TRYX proofs and workflows, release-publishing machinery, broad release manifests, paper production files, artwork, posters and E6B instruments. Historical records remain in the repository and engineering archive.
+
+The score, proof source, build route, receipt, citation and provenance needed for this Lean review are included. External Lean/Mathlib dependencies are fetched during the build.
+
+## Companion paper
+
+[NS ANEA locked edition 1.1 — 24-page PDF](https://github.com/TRYX-Relay/TRYX-MATHIC/blob/6a200381fa802347b144a2f077582985e7107525/archive/navier-stokes/version-2/paper-rewrite/261005/locked-1_1/NS_ANEA_LOCKED.pdf) is archived separately with its [editable source, splash and checksums](https://github.com/TRYX-Relay/TRYX-MATHIC/tree/6a200381fa802347b144a2f077582985e7107525/archive/navier-stokes/version-2/paper-rewrite/261005/locked-1_1). Access depends on engineering-repository permissions. It is optional for building this Lean target and is not bundled in the clean archive.
+
+## Historical records
+
+The [v6 reproduction package](publications/navier-stokes-v6/), [original reviewer manifest](review/ANEA_REVIEW_PACKET_v1_0.MANIFEST.md), [fortress closeout](review/NS_ANEA_PUBLIC_FORTRESS_CLOSEOUT_v1_0.md) and [parked release record](review/NS_ANEA_REVIEW_RELEASE_v1_0.PARKED.md) remain available for provenance. Their broader inventories describe earlier release states.
+
+## Review and provenance
+
+For a reproducible finding, identify the source commit, theorem or file, toolchain and dependency revisions, command, input and observed output. Distinguish algebraic correctness, finite replay and conditional bridges from the remaining analytic obligations. Artifact locks preserve bytes; they do not expand mathematical claims.
