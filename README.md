@@ -3,6 +3,8 @@
 **Virgil Lee Gattenby**  
 TRYX / ENIAD / MATHIC
 
+**[Public publication — paper, splash, HTML and README](publications/ns-anea/locked-1_1/README.md)** · **[Read the 24-page paper](publications/ns-anea/locked-1_1/NS_ANEA_LOCKED.pdf)**
+
 [![Verify NS MATHIC v7.2 Lean](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml/badge.svg)](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/actions/workflows/verify-ns-mathic-v72.yml)
 
 **[Download the clean Lean reviewer package](review/packages/261005/NS_ANEA_LEAN_REVIEW_261005.zip)** · **[Read the canonical MATHIC v7.2 score](review/Mathic/Navier_Stokes_Mathic_v7_2.PAPER_SYNC.LOCKED.md)**
@@ -55,9 +57,9 @@ The Lean reviewer archive excludes historical v6 papers and replay packages, unr
 
 The score, proof source, build route, receipt, citation and provenance needed for this Lean review are included. External Lean/Mathlib dependencies are fetched during the build.
 
-## Companion paper
+## Public publication
 
-[NS ANEA locked edition 1.1 — 24-page PDF](https://github.com/TRYX-Relay/TRYX-MATHIC/blob/6a200381fa802347b144a2f077582985e7107525/archive/navier-stokes/version-2/paper-rewrite/261005/locked-1_1/NS_ANEA_LOCKED.pdf) is archived separately with its [editable source, splash and checksums](https://github.com/TRYX-Relay/TRYX-MATHIC/tree/6a200381fa802347b144a2f077582985e7107525/archive/navier-stokes/version-2/paper-rewrite/261005/locked-1_1). Access depends on engineering-repository permissions. It is optional for building this Lean target and is not bundled in the clean archive.
+[Locked edition 1.1](publications/ns-anea/locked-1_1/README.md) contains exactly four files: the [24-page paper](publications/ns-anea/locked-1_1/NS_ANEA_LOCKED.pdf), [splash graphic](publications/ns-anea/locked-1_1/NS_ANEA_SPLASH_LOCKED.png), [FE6B HTML controller](publications/ns-anea/locked-1_1/NS_FLOW_CONTROLLER.html) and README. Download the HTML and open it locally. Checksums are recorded in the publication README. Lean review materials remain separate.
 
 ## Historical records
 
