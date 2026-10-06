@@ -1,0 +1,14 @@
+import NavierStokesMathicV73
+
+#print axioms NavierStokesMathicV73.force_channel_split
+#print axioms NavierStokesMathicV73.signed_action_split
+#print axioms NavierStokesMathicV73.forced_one_tension
+#print axioms NavierStokesMathicV73.forced_one_tension_ledger
+#print axioms NavierStokesMathicV73.zero_force_reduction
+#print axioms NavierStokesMathicV73.force_noop_rejected
+#print axioms NavierStokesMathicV73.addressed_transfer_retained
+#print axioms NavierStokesMathicV73.neutral_transfer_reduction
+#print axioms NavierStokesMathicV72.residual_split
+#print axioms NavierStokesMathicV72.locked_fixture_replay
+#print axioms NavierStokesMathicV72.corridor_returns_zero
+#print axioms NavierStokesMathicV72.corridor_has_35_rows

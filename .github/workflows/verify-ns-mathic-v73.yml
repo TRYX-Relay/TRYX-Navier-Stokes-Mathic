@@ -1,0 +1,50 @@
+name: Verify NS MATHIC v7.3 Lean
+on:
+  push:
+    paths:
+      - 'verification/ns-mathic-v73/**'
+      - '.github/workflows/verify-ns-mathic-v73.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lean-kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install pinned Lean
+        run: |
+          curl --fail --location --retry 3 https://raw.githubusercontent.com/leanprover/elan/v4.1.2/elan-init.sh -o "$RUNNER_TEMP/elan-init.sh"
+          sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain leanprover/lean4:v4.19.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Fetch pinned dependencies and cache
+        working-directory: verification/ns-mathic-v73
+        run: |
+          lake exe cache get
+          git diff --exit-code -- lake-manifest.json
+      - name: Static source audit
+        working-directory: verification/ns-mathic-v73
+        run: |
+          ! grep -RInE '\bsorry\b|^[[:space:]]*axiom\b' NS NavierStokesMathicV72.lean NavierStokesMathicV73.lean --include='*.lean'
+      - name: Build and kernel load
+        working-directory: verification/ns-mathic-v73
+        run: |
+          set -o pipefail
+          lake build 2>&1 | tee "$RUNNER_TEMP/v73-build.log"
+          lake env lean NavierStokesMathicV73.lean
+      - name: Axiom audit
+        working-directory: verification/ns-mathic-v73
+        run: |
+          set -o pipefail
+          lake env lean AxiomAudit.lean 2>&1 | tee "$RUNNER_TEMP/v73-axioms.log"
+          ! grep -q sorryAx "$RUNNER_TEMP/v73-axioms.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v73-lean-verification-logs
+          path: |
+            ${{ runner.temp }}/v73-build.log
+            ${{ runner.temp }}/v73-axioms.log
