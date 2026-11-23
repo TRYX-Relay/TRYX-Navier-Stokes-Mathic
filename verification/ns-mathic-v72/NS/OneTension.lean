@@ -1,4 +1,8 @@
-import NS.SignedStretching
+module
+
+public import NS.SignedStretching
+
+@[expose] public section
 
 namespace NavierStokesMathicV72
 
