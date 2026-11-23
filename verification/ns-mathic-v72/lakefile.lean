@@ -4,7 +4,7 @@ open Lake DSL
 package "NavierStokesMathicV72" where
 
 require mathlib from git
-  "https://github.com/leanprover-community/mathlib4.git" @ "v4.19.0"
+"https://github.com/leanprover-community/mathlib4.git" @ "v4.35.0-rc2"
 
 @[default_target]
 lean_lib NavierStokesMathicV72 where
