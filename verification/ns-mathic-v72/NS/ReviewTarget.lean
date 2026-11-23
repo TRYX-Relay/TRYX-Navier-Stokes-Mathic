@@ -1,4 +1,8 @@
-import NS.ClaimBoundary
+module
+
+public import NS.ClaimBoundary
+
+@[expose] public section
 
 namespace NavierStokesMathicV72
 
