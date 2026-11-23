@@ -1,4 +1,8 @@
-import NS.UniformActionControl
+module
+
+public import NS.UniformActionControl
+
+@[expose] public section
 
 namespace NavierStokesMathicV72
 
