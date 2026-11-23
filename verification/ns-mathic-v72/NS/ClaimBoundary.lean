@@ -1,4 +1,8 @@
-import NS.FixtureReplay
+module
+
+public import NS.FixtureReplay
+
+@[expose] public section
 
 namespace NavierStokesMathicV72
 
