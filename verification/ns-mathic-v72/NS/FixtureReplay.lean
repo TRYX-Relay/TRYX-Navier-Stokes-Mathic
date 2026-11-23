@@ -1,4 +1,8 @@
-import NS.R2Bridge
+module
+
+public import NS.R2Bridge
+
+@[expose] public section
 
 namespace NavierStokesMathicV72
 
