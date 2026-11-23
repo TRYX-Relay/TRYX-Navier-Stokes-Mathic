@@ -1,4 +1,8 @@
-import NS.Definitions
+module
+
+public import NS.Definitions
+
+@[expose] public section
 
 namespace NavierStokesMathicV72
 
