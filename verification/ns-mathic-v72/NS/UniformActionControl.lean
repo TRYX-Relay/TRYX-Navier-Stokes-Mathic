@@ -1,4 +1,8 @@
-import NS.OneTension
+module
+
+public import NS.OneTension
+
+@[expose] public section
 
 namespace NavierStokesMathicV72
 
