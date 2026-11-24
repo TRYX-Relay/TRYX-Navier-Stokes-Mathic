@@ -4,7 +4,10 @@ open Lake DSL
 package "NavierStokesMathicV72" where
 
 require mathlib from git
-"https://github.com/leanprover-community/mathlib4.git" @ "v4.35.0-rc2"
+  "https://github.com/leanprover-community/mathlib4.git" @ "v4.35.0-rc2"
+
+require Comparator from git
+  "https://github.com/leanprover/comparator.git" @ "v4.35.0-rc2"
 
 @[default_target]
 lean_lib NavierStokesMathicV72 where
@@ -21,3 +24,5 @@ lean_lib NavierStokesMathicV72 where
     `NS.ClaimBoundary,
     `NS.ReviewTarget
   ]
+
+lean_lib TryxChallenge
