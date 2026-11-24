@@ -1,0 +1,25 @@
+{
+  "challenge_module": "TryxChallenge",
+  "solution_module": "NavierStokesMathicV72",
+  "enable_nanoda": true,
+  "theorem_names": [
+    "NavierStokesMathicV72.projection_neutrality",
+    "NavierStokesMathicV72.signed_stretching_delta",
+    "NavierStokesMathicV72.signed_stretching_sigma",
+    "NavierStokesMathicV72.residual_split",
+    "NavierStokesMathicV72.one_tension",
+    "NavierStokesMathicV72.r1_finite_domination",
+    "NavierStokesMathicV72.r1_sum_le_positiveLoad",
+    "NavierStokesMathicV72.uniform_action_control_to_sigma",
+    "NavierStokesMathicV72.uac_to_differential_inequality",
+    "NavierStokesMathicV72.theta_identity",
+    "NavierStokesMathicV72.theta_factorization",
+    "NavierStokesMathicV72.r2_conditional_bridge",
+    "NavierStokesMathicV72.locked_fixture_replay"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}
