@@ -1,0 +1,30 @@
+version: "v0.4"
+project:
+  name: "Navier-Stokes MATHIC v7.2"
+  description: "Formalization of the executable algebraic spine and conditional estimates."
+  authors:
+    - "Virgil Lee Gattenby"
+  responsible_maintainers:
+    - "Virgil Lee Gattenby"
+classification:
+  arxiv: ["math.AP"]
+sources:
+  - title: "Navier-Stokes MATHIC v7.2"
+    type: paper
+    relationship: formalizes
+    authors:
+      - "Virgil Lee Gattenby"
+status:
+  scope: >-
+    Thirteen declarations selected by comparator.json cover finite algebraic
+    identities, conditional estimates and fixture replay. Scale-uniform
+    depletion, unconditional UAC, continuum passage and global three-dimensional
+    regularity remain open in this formalization.
+automation:
+  methods:
+    - method: agent
+      models: ["ChatGPT"]
+      framework: "TRYX MATHIC"
+review:
+  status: "self-assessed"
+  notes: "Fresh Palomar verification pending."
