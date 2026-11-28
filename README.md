@@ -1,3 +1,5 @@
+> **Palomar v7.2 submission snapshot.** See [submission scope](PALOMAR_SUBMISSION_SCOPE.md). The other historical Lean projects referenced below remain at the [preserved source revision](https://github.com/TRYX-Relay/TRYX-Navier-Stokes-Mathic/tree/312ee3ebde776b043fdf05805c64b69b92cfda53). Only the complete v7.2 project is submitted here.
+
 # Navier–Stokes: A Nonexplosive Alternative
 
 **Virgil Lee Gattenby**  

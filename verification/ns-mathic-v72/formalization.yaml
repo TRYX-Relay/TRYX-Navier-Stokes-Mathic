@@ -1,7 +1,8 @@
 version: "v0.4"
 project:
   name: "Navier-Stokes MATHIC v7.2"
-  description: "Formalization of the executable algebraic spine and conditional estimates."
+  description: "Standalone submission snapshot of the complete Navier-Stokes MATHIC v7.2 Lean project: finite algebraic identities, conditional estimates and fixture replay. Other historical and v7.3 projects remain in the source revision, outside this entry." 
+  license: "CC-BY-NC-4.0"
   authors:
     - "Virgil Lee Gattenby"
   responsible_maintainers:
